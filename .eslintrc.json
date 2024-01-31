@@ -5,7 +5,11 @@
         "es6": true,
         "node": true
     },
-    "extends": ["eslint:recommended", "plugin:mocha/recommended"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:mocha/recommended",
+        "plugin:prettier/recommended"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -16,21 +20,10 @@
     "plugins": ["mocha"],
     "ignorePatterns": ["docs"],
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "prettier/prettier": ["error", { "singleQuote": true }]
     }
 }
